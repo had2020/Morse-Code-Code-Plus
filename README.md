@@ -37,12 +37,27 @@ The whole concept behind `Morse Code Code Plus` is memory manipulation. Just lik
 ..  // decreases value stored at the block pointed to by the memory pointer.
 ... // like c while(cur_block_value != 0) loop.
 --- // if block currently pointed to's value is not zero, jump back to [
-.   // like println!() in Rust. input 1 character.
+.   // like io::stdin().read_line() in Rust. input 1 character.
 -   // like println!() in Rust. print 1 character to the console
+Ex: .-.-.- // Number Constant, same as machine code, but . = 0, and - = 1.
 ```
 These are the 8 keywords, they are separated by whitespace.
 This now only used 3 chars vs 8, which is more minimalist. And more readable to some people.
 * Note subjecs that translated the morse code have experienced symptoms of a trinary translation of reality
 
-Huge inspiration:
+Some Rules:
+
+- Any other hertical characters will be ignored, you can use them as comments if needed.
+  
+- Any other combo of the dot and dash will be translated into the Base 2 number system in machine code. https://en.wikipedia.org/wiki/Binary_number for infomatation on the system.
+
+- All memory blocks are not initialized as zero until the point performs an operation on it.
+
+- Extra characters written beyond the first character are ignored. So you can use them to vent if needed.
+
+- You can nest loops as much as you need to punish your computer.
+
+- Also in the Base 2 Number Constants, numbers beyond 4 bits, will be added as a separate number.
+
+# Huge inspiration:
 https://gist.github.com/roachhd/dce54bec8ba55fb17d3a
