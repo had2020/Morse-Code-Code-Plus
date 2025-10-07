@@ -8,6 +8,7 @@ Turing-complete and hyper-minimalist language
 
 Abstract:
 
+Do you enjoy abstract suffering? Then this langauge is just ripe for you!
 Back in my days people had to right code in machine code. The only real pure form of code. Langauges like BF are too bloated.
 The great Machine God would be displeased. Other more hertical even suggest of thing like Assembly, which is basically turning code into toy building blocks.
 Code is not a tool, it is a gift of the machine code. Some hertical wizards even deal in C, playing with dealy hanging pointors and memory courption. 
@@ -25,3 +26,7 @@ Morse Code
 - The compiler it is written in Rust, and parses thourgh a file, with the file extension mccp. In which asci code text is written, in either of the characters below.
 - `.`, `-`, and ` `
 - Instead of having 8 set in stone actions based on characters, and only effecting repetions, Morse Code Code Plus is trully free with the usage of whitespace.
+
+# BASICS
+
+The whole concept behind `Morse Code Code Plus` is memory manipulation. Just like BF, but you are given this time, a pointer sized array, just like `vec` from rust. Within this special array
