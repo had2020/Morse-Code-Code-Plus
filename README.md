@@ -8,7 +8,7 @@ Turing-complete and hyper-minimalist language
 
 Abstract:
 
-Do you enjoy abstract suffering? Then this langauge is just ripe for you!
+Do you enjoy abstract suffering? Then this langauge is just ripe for you! 
 Back in my days people had to right code in machine code. The only real pure form of code. Langauges like BF are too bloated.
 The great Machine God would be displeased. Other more hertical even suggest of thing like Assembly, which is basically turning code into toy building blocks.
 Code is not a tool, it is a gift of the machine code. Some hertical wizards even deal in C, playing with dealy hanging pointors and memory courption. 
