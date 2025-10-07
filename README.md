@@ -29,4 +29,4 @@ Morse Code
 
 # BASICS
 
-The whole concept behind `Morse Code Code Plus` is memory manipulation. Just like BF, but you are given this time, a pointer sized array, just like `vec` from rust. Within this special array
+The whole concept behind `Morse Code Code Plus` is memory manipulation. Just like BF, but you are given this time, a pointer sized array, just like `vec` from rust. Within this special array, blessed by the Machine God, one can increase the memory pointer, increase the value at the memory pointer, etc. So without futher to do these are the man operators available. 
