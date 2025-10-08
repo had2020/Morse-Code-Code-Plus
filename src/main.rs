@@ -1,7 +1,6 @@
 use std::env;
 use std::fs::File;
 use std::io::{self, BufRead};
-use std::path::Path;
 
 fn main() {
     if let Some(filepath) = env::args().nth(1) {
