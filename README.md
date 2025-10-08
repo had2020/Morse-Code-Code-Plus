@@ -56,11 +56,12 @@ Some Rules:
 
 - Also in the Base 2 Number Constants, numbers beyond 4 bits, will be added as a separate number.
 
-# How to build the compiler
+# How to build the compiler from source?
 
 This project consists of the compiler for Morse Code Code Plus.
-In other to build across differnet operating systems upon differing CPU architectures,
-one can compile the Rust based compiler, and then use it as a command line ulity to compile Morse Code Code Plus into corresponding Machine code.
+In order to build across different operating systems upon differing CPU architectures,
+one can compile the Rust based compiler; then use it as a command line ulity to compile Morse Code Code Plus into corresponding Machine code. 
+Otherwise you can just download the compiler from the releases.
 
 Step 1.) Clone/Download the source Repo
 ``` Bash
@@ -73,6 +74,16 @@ cargo build
 ```
 
 Step 3.) Retrive the executable from target/debug, it is under the name MCCP, which stands for Morse Code Code Plus.
+
+# How to compile Morse Code Code Plus?
+
+Firstly, download a compiler release, if one is available for your target architecture, otherwise compile it from source.
+
+``` Bash
+./MCCP filepath # On Unix
+```
+To keep files organized by coding langauge I recommend using the MCCP file extension.
+
 
 # Huge inspiration:
 https://gist.github.com/roachhd/dce54bec8ba55fb17d3a
