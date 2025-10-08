@@ -30,12 +30,12 @@ Morse Code
 # BASICS
 
 The whole concept behind `Morse Code Code Plus` is memory manipulation. Just like BF, but you are given this time, a pointer sized array, just like `vec` from rust. Within this special array, blessed by the Machine God, one can increase the memory pointer, increase the value at the memory pointer, etc. So without futher to do these are the man operators available. 
-``` Morse Code Code Plus
+``` Rust
 .-  // increases memory pointer, or moves the pointer to the right 1 block.
 -.  // decreases memory pointer, or moves the pointer to the left 1 block.
 --  // increases value stored at the block pointed to by the memory pointer.
 ..  // decreases value stored at the block pointed to by the memory pointer.
-... // like c while(cur_block_value != 0) loop.
+... // like while(cur_block_value != 0) loop.
 --- // if block currently pointed to's value is not zero, jump back to [
 .   // like io::stdin().read_line() in Rust. input 1 character.
 -   // like println!() in Rust. print 1 character to the console
