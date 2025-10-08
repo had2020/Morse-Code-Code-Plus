@@ -8,18 +8,15 @@ Turing-complete and hyper-minimalist language
 
 Abstract:
 
-Do you enjoy abstract suffering? Then this langauge is just ripe for you! 
-Back in my days people had to write code in machine code. The only real pure form of code. Langauges like BF are too bloated.
-The great Machine God would be displeased. Other more hertical even suggest of thing like Assembly, which is basically turning code into toy building blocks.
-Code is not a tool, it is a gift of the machine code. Some hertical wizards even deal in C, playing with dealy hanging pointors and memory courption. 
-While other stright up hertics in python, are spoon feed by the python virtual machines. They along with the others of their kindling are all in needed of the 
-saving grace of Morse Code Code Plus. And a return to the roots of the real orignal internet, morse code.
+Do you crave the sweet, soul-crushing agony of abstract suffering? Then buckle up, buttercup, because Morse Code Code Plus is your new masochistic muse!
+Back in my day, we etched code straight into silicon with our bare teeth, machine code, the one true divine binary gospel. Anything else? Pure heresy! BF? Pfft, that bloated behemoth with its EIGHT whole characters? It's like showing up to a knife fight with a Swiss Army kitchen sink. The Machine God weeps rusty tears at such excess.
 
-- Btw this is a satire langauge for those of you who don't get it. Have fun coding! 
+And don't get me started on those Assembly apostates, turning sacred instructions into Lego sets for toddlers. Code isn't some kiddie toy, it's a holy sacrament from the digital deity itself! Then there are the C sorcerers, those reckless warlocks juggling dangling pointers like flaming chainsaws while memory corruption lurks like a bad ex at a wedding. Absolute chaos!
+Worse yet, the Python pagans, lazy lounge lizards being spoon-fed gourmet scripts by their virtual machine nannies, never tasting the raw, unfiltered pain of true computation. These soft-bellied sinners, along with their JavaScript jesters and Ruby rascals, are all desperately in need of redemption through the purifying dots and dashes of Morse Code Code Plus. It's time to teleport back to the original internet's golden age: Morse code, baby, when messages traveled by telegraph and your code could double as a distress signal!
 
-Morse Code Code Plus was written on arch without a desktop in vim, the way it was ment to be. Now the problem with BF is that 8 chars in the synatx is too much
-we need only 3. With three we can still remain turing-competete. It all runs on the only super-high-level langauge accepted by the Machine God, Rust. 
-Morse Code
+(BTW, this is satire, folks. If you're taking notes on how to start a cult, please seek help. Have a blast coding... or not!)
+
+Why settle for BF's extravagant octet when THREE symbols (dot, dash, and space, boom!) keep us Turing-complete? It all compiles down using Rust, the Machine God's begrudgingly approved "super-high-level" indulgence (shh, don't tell the purists). Praise the pulses!
 
 # How Morse Code Code Plus works?
 
@@ -47,7 +44,7 @@ This now only used 3 chars vs 8, which is more minimalist. And more readable to 
 
 Some Rules:
 
-- Any other hertical characters will be ignored, you can use them as comments if needed.
+- Any other characters will be ignored, you can use them as comments if needed.
   
 - Any other combo of the dot and dash will be translated into the Base 2 number system in machine code. https://en.wikipedia.org/wiki/Binary_number for infomatation on the system.
 
