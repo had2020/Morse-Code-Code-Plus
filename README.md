@@ -26,7 +26,7 @@ Why settle for BF's extravagant octet when THREE symbols (dot, dash, and space, 
 
 # BASICS
 
-The whole concept behind `Morse Code Code Plus` is memory manipulation. Just like BF, but you are given this time, a pointer sized array, just like `vec` from rust. Within this special array, blessed by the Machine God, one can increase the memory pointer, increase the value at the memory pointer, etc. So without futher to do these are the man operators available. 
+The whole concept behind `Morse Code Code Plus` is memory manipulation. Just like BF, but you are given this time, a pointer sized array, just like `vec` from rust. Within this special array, blessed by the Machine God, one can increase the memory pointer, increase the value at the memory pointer, etc. So without futher to do these are the man operators available.
 ``` Rust
 .-  // increases memory pointer, or moves the pointer to the right 1 block.
 -.  // decreases memory pointer, or moves the pointer to the left 1 block.
@@ -45,7 +45,7 @@ This now only used 3 chars vs 8, which is more minimalist. And more readable to 
 Some Rules:
 
 - Any other characters will be ignored, you can use them as comments if needed.
-  
+
 - Any other combo of the dot and dash will be translated into the Base 2 number system in machine code. https://en.wikipedia.org/wiki/Binary_number for infomatation on the system.
 
 - All memory blocks are not initialized as zero until the point performs an operation on it.
@@ -55,6 +55,15 @@ Some Rules:
 - You can nest loops as much as you need to punish your computer.
 
 - Also in the Base 2 Number Constants, numbers beyond 4 bits, will be added as a separate number.
+
+# How to build the compiler
+
+This project consists of the compiler for Morse Code Code Plus.
+In other to build across differnet operating systems upon differing CPU architectures,
+one can compile the Rust based compiler, and then use it as a command line ulity to compile Morse Code Code Plus into corresponding Machine code.
+
+Step 1.)
+Clone/Download the source Repo
 
 # Huge inspiration:
 https://gist.github.com/roachhd/dce54bec8ba55fb17d3a
