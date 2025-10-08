@@ -60,7 +60,7 @@ Some Rules:
 
 This project consists of the compiler for Morse Code Code Plus.
 In order to build across different operating systems upon differing CPU architectures,
-one can compile the Rust based compiler; then use it as a command line ulity to compile Morse Code Code Plus into corresponding Machine code. 
+one can compile the Rust based compiler; then use it as a command line ulity to compile Morse Code Code Plus into corresponding Machine code.
 Otherwise you can just download the compiler from the releases.
 
 Step 1.) Clone/Download the source Repo
@@ -83,7 +83,3 @@ Firstly, download a compiler release, if one is available for your target archit
 ./MCCP filepath # On Unix
 ```
 To keep files organized by coding langauge I recommend using the MCCP file extension.
-
-
-# Huge inspiration:
-https://gist.github.com/roachhd/dce54bec8ba55fb17d3a
