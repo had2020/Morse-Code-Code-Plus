@@ -62,8 +62,17 @@ This project consists of the compiler for Morse Code Code Plus.
 In other to build across differnet operating systems upon differing CPU architectures,
 one can compile the Rust based compiler, and then use it as a command line ulity to compile Morse Code Code Plus into corresponding Machine code.
 
-Step 1.)
-Clone/Download the source Repo
+Step 1.) Clone/Download the source Repo
+``` Bash
+git clone https://github.com/had2020/Morse-Code-Code-Plus.git
+```
+
+Step 2.) Compiling the compiler.
+``` Bash
+cargo build
+```
+
+Step 3.) Retrive the executable from target/debug, it is under the name MCCP, which stands for Morse Code Code Plus.
 
 # Huge inspiration:
 https://gist.github.com/roachhd/dce54bec8ba55fb17d3a
