@@ -1,3 +1,4 @@
+use inkwell::*;
 use std::env;
 use std::fs::File;
 use std::io::{self, BufRead};
@@ -12,6 +13,8 @@ fn main() {
         for line in reader.lines() {
             line_buffer.push(line.unwrap());
         }
+
+        println!("{:?}", line_buffer);
     } else {
         println!("Please include filepath, as command line argument!");
         std::process::exit(1);
