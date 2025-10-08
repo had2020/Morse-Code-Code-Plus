@@ -1,8 +1,6 @@
 use std::env;
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
-
     if let Some(second) = env::args().nth(1) {
         println!("arg: {}", second);
     } else {
