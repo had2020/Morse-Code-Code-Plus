@@ -36,7 +36,7 @@ The whole concept behind `Morse Code Code Plus` is memory manipulation. Just lik
 --- // if block currently pointed to's value is not zero, jump back to [
 .   // like io::stdin().read_line() in Rust. input 1 character.
 -   // like println!() in Rust. print number value of the block to the console.
-_._ // like println!() in Rust. print 1 character to the console.
+-.- // like println!() in Rust. print 1 character to the console.
 Ex: .-.-.- // Number Constant, same as machine code, but . = 0, and - = 1.
 ```
 These are the 9 keywords, they are all separated by whitespace.
