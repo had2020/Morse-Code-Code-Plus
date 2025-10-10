@@ -84,7 +84,7 @@ fn main() {
 
         let mut tempfile = File::create("temp.rs").unwrap();
         let mut contents: String = format!(
-            "fn main() {} let mut v: Vec<usize> = vec![]; let mut pc: usize = 0; ",
+            "use std::io; fn main() {} let mut v: Vec<usize> = vec![]; let mut pc: usize = 0; ",
             '{'
         );
 
@@ -98,7 +98,13 @@ fn main() {
                 Op::DecrementBlock => newc = format!("{} v[pc] -= 1;", a),
                 Op::WhileFront => newc = format!("{}", a),
                 Op::WhileBack => newc = format!("{}", a),
-                Op::Input => newc = format!("{} v[pc] = io::stdin().read_line() as usize;", a),
+                Op::Input => {
+                    newc = format!(
+                        "{} {}",
+                        a,
+                        r#"v[pc] = { let mut s = String::new(); io::stdin().read_line(&mut s).unwrap(); s.trim().parse().unwrap() };"#
+                    )
+                }
                 Op::Output => newc = format!("{} {}", a, r#"print!("{}", v[pc]);"#),
                 Op::Constant { n } => newc = format!("{} v[pc] = {};", a, n),
             }
