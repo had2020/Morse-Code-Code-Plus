@@ -89,7 +89,7 @@ fn main() {
 
         let mut tempfile = File::create("temp.rs").unwrap();
         let mut contents: String = format!(
-            "use std::io; fn main() {} let mut v: Vec<usize> = vec![]; let mut pc: usize = 0; let mut ls: usize = 0; let mut le: usize = 0;",
+            "use std::io; fn main() {} let mut v: Vec<usize> = vec![]; let mut pc: usize = 0;",
             '{'
         );
 
@@ -99,16 +99,10 @@ fn main() {
             match i {
                 Op::IncrementPointer => newc = format!("pc = pc.saturating_add(1); "),
                 Op::DecrementPointer => newc = format!("pc = pc.saturating_sub(1); "),
-                Op::IncrementBlock => newc = format!("{} v[pc] = v[pc].saturating_add(1);", a),
-                Op::DecrementBlock => newc = format!("{} v[pc] = v[pc].saturating_sub(1);", a),
-                Op::WhileFront => {
-                    newc = format!(
-                        "{} ls = pc.clone(); {}",
-                        a,
-                        r#"if v[pc] != 0 { v[pc] = v[pc].saturating_sub(1); } else { pc = le.clone();}"#
-                    )
-                }
-                Op::WhileBack => newc = format!("{} le = pc.clone(); pc = ls.clone();", a),
+                Op::IncrementBlock => newc = format!("{} v[pc] = v[pc].saturating_add(1); ", a),
+                Op::DecrementBlock => newc = format!("{} v[pc] = v[pc].saturating_sub(1); ", a),
+                Op::WhileFront => newc = format!("{} {}", a, r#" while (v[pc.clone()] != 0) {"#),
+                Op::WhileBack => newc = format!("{}", '}'),
                 Op::Input => {
                     newc = format!(
                         "{} {}",
