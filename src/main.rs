@@ -66,7 +66,7 @@ fn main() {
                             token_buffer = vec![];
                         }
                         _ => {
-                            if token_buffer.len() == 4 {
+                            if token_buffer.len() == 8 {
                                 let mut r: usize = 0;
                                 for i in 0..token_buffer.len() {
                                     let n: usize = if token_buffer[i] == '-' {
