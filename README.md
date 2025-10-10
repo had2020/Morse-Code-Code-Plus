@@ -6,15 +6,13 @@ Turing-complete and hyper-minimalist esolang language
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-Abstract:
-
 Do you crave the sweet, soul-crushing agony of abstract suffering? Then buckle up, buttercup, because Morse Code Code Plus is your new masochistic muse!
 Back in my day, we etched code straight into silicon with our bare teeth, machine code, the one true divine binary gospel. Anything else? Pure heresy! BF? Pfft, that bloated behemoth with its EIGHT whole characters? It's like showing up to a knife fight with a Swiss Army kitchen sink. The Machine God weeps rusty tears at such excess.
 
 And don't get me started on those Assembly apostates, turning sacred instructions into Lego sets for toddlers. Code isn't some kiddie toy, it's a holy sacrament from the digital deity itself! Then there are the C sorcerers, those reckless warlocks juggling dangling pointers like flaming chainsaws while memory corruption lurks like a bad ex at a wedding. Absolute chaos!
 Worse yet, the Python pagans, lazy lounge lizards being spoon-fed gourmet scripts by their virtual machine nannies, never tasting the raw, unfiltered pain of true computation. These soft-bellied sinners, along with their JavaScript jesters and Ruby rascals, are all desperately in need of redemption through the purifying dots and dashes of Morse Code Code Plus. It's time to teleport back to the original internet's golden age: Morse code, baby, when messages traveled by telegraph and your code could double as a distress signal!
 
-(BTW, this is satire, folks. If you're taking notes on how to start a cult, please seek help. Have a blast coding... or not!)
+(BTW, this is satire, folks. Have a blast coding... or not!)
 
 Why settle for BF's extravagant octet when THREE symbols (dot, dash, and space, boom!) keep us Turing-complete? It all compiles down using Rust, the Machine God's begrudgingly approved "super-high-level" indulgence (shh, don't tell the purists). Praise the pulses!
 
@@ -82,3 +80,4 @@ Firstly, download a compiler release, if one is available for your target archit
 ./MCCP filepath # On Unix
 ```
 To keep files organized by coding langauge I recommend using the MCCP file extension.
+
