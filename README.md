@@ -35,10 +35,11 @@ The whole concept behind `Morse Code Code Plus` is memory manipulation. Just lik
 ... // like while(cur_block_value != 0) loop.
 --- // if block currently pointed to's value is not zero, jump back to [
 .   // like io::stdin().read_line() in Rust. input 1 character.
--   // like println!() in Rust. print 1 character to the console
+-   // like println!() in Rust. print number value of the block to the console.
+-.- // like println!() in Rust. print 1 character to the console.
 Ex: .-.-.- // Number Constant, same as machine code, but . = 0, and - = 1.
 ```
-These are the 8 keywords, they are separated by whitespace.
+These are the 9 keywords, they are all separated by whitespace.
 This now only used 3 chars vs 8, which is more minimalist. And more readable to some people.
 * Note subjecs that translated the morse code have experienced symptoms of a trinary translation of reality
 
