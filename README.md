@@ -2,7 +2,7 @@
 
 # Morse Code Code Plus
 
-Turing-complete and hyper-minimalist language
+Turing-complete and hyper-minimalist esolang language
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
