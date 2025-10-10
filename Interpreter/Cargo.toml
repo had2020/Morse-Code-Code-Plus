@@ -1,6 +1,0 @@
-[package]
-name = "MCCPI" # Stands for Morse Code Code Plus Interpreter
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]

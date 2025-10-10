@@ -61,7 +61,6 @@ Some Rules:
 This project consists of the compiler for Morse Code Code Plus.
 In order to build across different operating systems upon differing CPU architectures,
 one can compile the Rust based compiler; then use it as a command line ulity to compile Morse Code Code Plus into corresponding Machine code.
-Otherwise you can just download the compiler from the releases.
 
 Step 1.) Clone/Download the source Repo
 ``` Bash
