@@ -55,7 +55,7 @@ Some Rules:
 
 - You can nest loops as much as you need to punish your computer.
 
-- Also in the Base 2 Number Constants, numbers beyond 4 bits, will be ignored.
+- Also in the Base 2 Number Constants, numbers beyond 8 bits, will be ignored.
 # How to build the compiler from source?
 
 This project consists of the compiler for Morse Code Code Plus.
