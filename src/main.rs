@@ -11,7 +11,8 @@ enum Op {
     WhileFront,
     WhileBack,
     Input,
-    Output,
+    OutputC,
+    OutputB,
     Constant { n: usize },
 }
 
@@ -57,7 +58,11 @@ fn main() {
                             token_buffer = vec![];
                         }
                         "-" => {
-                            tokens.push(Op::Output);
+                            tokens.push(Op::OutputC);
+                            token_buffer = vec![];
+                        }
+                        "-.-" => {
+                            tokens.push(Op::OutputB);
                             token_buffer = vec![];
                         }
                         _ => {
@@ -84,7 +89,7 @@ fn main() {
 
         let mut tempfile = File::create("temp.rs").unwrap();
         let mut contents: String = format!(
-            "use std::io; fn main() {} let mut v: Vec<usize> = vec![]; let mut pc: usize = 0; ",
+            "use std::io; fn main() {} let mut v: Vec<usize> = vec![]; let mut pc: usize = 0; let mut ls: usize = 0; let mut le: usize = 0;",
             '{'
         );
 
@@ -92,12 +97,18 @@ fn main() {
             let a = format!("{}", r#"while v.len() < pc + 1 {v.push(0);}"#);
             let newc;
             match i {
-                Op::IncrementPointer => newc = format!("pc += 1; "),
-                Op::DecrementPointer => newc = format!("pc -= 1; "),
-                Op::IncrementBlock => newc = format!("{} v[pc] += 1;", a),
-                Op::DecrementBlock => newc = format!("{} v[pc] -= 1;", a),
-                Op::WhileFront => newc = format!("{}", a),
-                Op::WhileBack => newc = format!("{}", a),
+                Op::IncrementPointer => newc = format!("pc = pc.saturating_add(1); "),
+                Op::DecrementPointer => newc = format!("pc = pc.saturating_sub(1); "),
+                Op::IncrementBlock => newc = format!("{} v[pc] = v[pc].saturating_add(1);", a),
+                Op::DecrementBlock => newc = format!("{} v[pc] = v[pc].saturating_sub(1);", a),
+                Op::WhileFront => {
+                    newc = format!(
+                        "{} ls = pc.clone(); {}",
+                        a,
+                        r#"if v[pc] != 0 { v[pc] = v[pc].saturating_sub(1); } else { pc = le.clone();}"#
+                    )
+                }
+                Op::WhileBack => newc = format!("{} le = pc.clone(); pc = ls.clone();", a),
                 Op::Input => {
                     newc = format!(
                         "{} {}",
@@ -105,7 +116,14 @@ fn main() {
                         r#"v[pc] = { let mut s = String::new(); io::stdin().read_line(&mut s).unwrap(); s.trim().parse().unwrap() };"#
                     )
                 }
-                Op::Output => newc = format!("{} {}", a, r#"print!("{}", v[pc]);"#),
+                Op::OutputC => {
+                    newc = format!(
+                        "{} {}",
+                        a,
+                        r#"print!("{}", char::from_u32(v[pc] as u32).map_or("Not a valid char".to_string(), |c| c.to_string()));"#
+                    )
+                }
+                Op::OutputB => newc = format!("{} {}", a, r#"print!("{}", v[pc]);"#),
                 Op::Constant { n } => newc = format!("{} v[pc] = {};", a, n),
             }
             contents = format!("{}{}", contents, newc);
