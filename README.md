@@ -32,8 +32,8 @@ The whole concept behind `Morse Code Code Plus` is memory manipulation. Just lik
 -.  // decreases memory pointer, or moves the pointer to the left 1 block.
 --  // increases value stored at the block pointed to by the memory pointer.
 ..  // decreases value stored at the block pointed to by the memory pointer.
-... // like while(cur_block_value != 0) loop.
---- // if block currently pointed to's value is not zero, jump back to [
+... // like while block value.clone != 0 {
+--- // like }
 .   // like io::stdin().read_line() in Rust. input 1 character.
 -   // like println!() in Rust. print number value of the block to the console.
 -.- // like println!() in Rust. print 1 character to the console.
